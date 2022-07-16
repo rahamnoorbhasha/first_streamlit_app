@@ -8,7 +8,7 @@ streamlit.text('Poori curry')
 import pandas as pd
 
 df=pd.read_csv('https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt')
-df.set_index('Fruits',inplace=True)
+df.set_index('Fruit',inplace=True)
 
 streamlit.multiselect("pick some fruits : ", list(df.index))
 streamlit.dataframe(df)
