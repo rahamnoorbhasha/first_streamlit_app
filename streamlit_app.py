@@ -8,6 +8,8 @@ fruityvice_response = requests.get('https://fruityvice.com/api/fruit/watermelon'
 streamlit.text(fruityvice_response.json())
 
 streamlit.dataframe(pd.json_normalize(fruityvice_response.json()))
+fruit_choice=streamlit.text_input('what fruit would you like information about?','Kiwi')
+streamlit.write(fruit_choice)
 
 streamlit.title('snowflake badge2 course')
 streamlit.header('🥗 Breakfast Menu')
