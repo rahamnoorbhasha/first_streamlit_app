@@ -2,7 +2,7 @@ import streamlit
 import requests
 fruityvice_response = requests.get('https://fruityvice.com/api/fruit/watermelon')
 
-streamlit.text(fruityvice_response)
+streamlit.text(fruityvice_response.json())
 
 streamlit.title('snowflake badge2 course')
 streamlit.header('🥗 Breakfast Menu')
