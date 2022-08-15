@@ -4,6 +4,8 @@ fruityvice_response = requests.get('https://fruityvice.com/api/fruit/watermelon'
 
 streamlit.text(fruityvice_response.json())
 
+streamlit.dataframe(pandas.json_normalize(fruityvice_response.json()))
+
 streamlit.title('snowflake badge2 course')
 streamlit.header('🥗 Breakfast Menu')
 streamlit.text('Dosa chutney')
